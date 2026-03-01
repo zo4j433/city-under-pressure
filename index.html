@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>City Under Pressure</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="stat">🔁 Actions: <span id="turns">50</span></div>
+      <div class="stat">💰 Funds: <span id="money">100</span>/<span id="moneyMax">100</span></div>
+      <div class="stat">⚔️ Decision Power: <span id="atk">10</span></div>
+      <div class="stat">⭐ Reputation: <span id="rep">0</span></div>
+      <div class="stat">📈 Level: <span id="lv">1</span> (EXP <span id="exp">0</span>/<span id="nextExp">30</span>)</div>
+    </header>
+
+    <main class="board">
+
+      <div class="card-shell" data-slot="0" role="button" tabindex="0" aria-label="Infrastructure Deck">
+        <div class="card-underlay">
+          <div class="underlay-left" id="left-0">Discard</div>
+          <div class="underlay-right" id="right-0">Use</div>
+        </div>
+        <div class="card">
+          <div class="pile-title">
+            <span style="opacity:.75;font-size:12px;">(Remaining <span id="deck-infra">10</span>)</span>
+          </div>
+          <div class="pile-card" id="card-0">(Not revealed)</div>
+        </div>
+      </div>
+
+
+      <div class="card-shell" data-slot="1" role="button" tabindex="0" aria-label="Environment Deck">
+        <div class="card-underlay">
+          <div class="underlay-left" id="left-1">Discard</div>
+          <div class="underlay-right" id="right-1">Use</div>
+        </div>
+        <div class="card">
+          <div class="pile-title">
+            <span style="opacity:.75;font-size:12px;">(Remaining <span id="deck-env">10</span>)</span>
+          </div>
+          <div class="pile-card" id="card-1">(Not revealed)</div>
+        </div>
+      </div>
+
+
+      <div class="card-shell" data-slot="2" role="button" tabindex="0" aria-label="Governance Deck">
+        <div class="card-underlay">
+          <div class="underlay-left" id="left-2">Discard</div>
+          <div class="underlay-right" id="right-2">Use</div>
+        </div>
+        <div class="card">
+          <div class="pile-title">
+            <span style="opacity:.75;font-size:12px;">(Remaining <span id="deck-gov">10</span>)</span>
+          </div>
+          <div class="pile-card" id="card-2">(Not revealed)</div>
+        </div>
+      </div>
+
+      <div class="card-shell" data-slot="3" role="button" tabindex="0" aria-label="Public Safety Deck">
+        <div class="card-underlay">
+          <div class="underlay-left" id="left-3">Discard</div>
+          <div class="underlay-right" id="right-3">Use</div>
+        </div>
+        <div class="card">
+          <div class="pile-title">
+            <span style="opacity:.75;font-size:12px;">(Remaining <span id="deck-safety">10</span>)</span>
+          </div>
+          <div class="pile-card" id="card-3">(Not revealed)</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="screen" class="screen-overlay" style="display:none;">
+    <div class="screen-panel">
+      <h1 id="screen-title">City Under Pressure</h1>
+      <p id="screen-desc" style="margin-top:10px;opacity:.85;line-height:1.5;"></p>
+
+      <div id="screen-stats" style="margin-top:12px;font-size:14px;opacity:.85;"></div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;justify-content:center;">
+        <button id="btn-primary">Start</button>
+        <button id="btn-secondary" style="display:none;">Back to Title</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
